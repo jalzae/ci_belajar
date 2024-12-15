@@ -1,0 +1,16 @@
+ERROR - 2024-12-08 13:44:13 --> mysqli_sql_exception: You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ') DEFAULT CHARACTER SET = utf8mb4 COLLATE = utf8mb4_general_ci' at line 2 in /Users/applemacbookprom2/Project/PHP/belajar/system/Database/MySQLi/Connection.php:312
+Stack trace:
+#0 /Users/applemacbookprom2/Project/PHP/belajar/system/Database/MySQLi/Connection.php(312): mysqli->query('CREATE TABLE `u...', 0)
+#1 /Users/applemacbookprom2/Project/PHP/belajar/system/Database/BaseConnection.php(734): CodeIgniter\Database\MySQLi\Connection->execute('CREATE TABLE `u...')
+#2 /Users/applemacbookprom2/Project/PHP/belajar/system/Database/BaseConnection.php(648): CodeIgniter\Database\BaseConnection->simpleQuery('CREATE TABLE `u...')
+#3 /Users/applemacbookprom2/Project/PHP/belajar/system/Database/Forge.php(570): CodeIgniter\Database\BaseConnection->query('CREATE TABLE `u...')
+#4 /Users/applemacbookprom2/Project/PHP/belajar/app/Database/Migrations/2024-12-08-133921_CreateUsers.php(25): CodeIgniter\Database\Forge->createTable('users')
+#5 /Users/applemacbookprom2/Project/PHP/belajar/system/Database/MigrationRunner.php(867): App\Database\Migrations\CreateUsers->up()
+#6 /Users/applemacbookprom2/Project/PHP/belajar/system/Database/MigrationRunner.php(183): CodeIgniter\Database\MigrationRunner->migrate('up', Object(stdClass))
+#7 /Users/applemacbookprom2/Project/PHP/belajar/system/Commands/Database/Migrate.php(85): CodeIgniter\Database\MigrationRunner->latest(NULL)
+#8 /Users/applemacbookprom2/Project/PHP/belajar/system/CLI/Commands.php(70): CodeIgniter\Commands\Database\Migrate->run(Array)
+#9 /Users/applemacbookprom2/Project/PHP/belajar/system/CLI/Console.php(48): CodeIgniter\CLI\Commands->run('migrate', Array)
+#10 /Users/applemacbookprom2/Project/PHP/belajar/system/Boot.php(351): CodeIgniter\CLI\Console->run()
+#11 /Users/applemacbookprom2/Project/PHP/belajar/system/Boot.php(104): CodeIgniter\Boot::runCommand(Object(CodeIgniter\CLI\Console))
+#12 /Users/applemacbookprom2/Project/PHP/belajar/spark(84): CodeIgniter\Boot::bootSpark(Object(Config\Paths))
+#13 {main}
